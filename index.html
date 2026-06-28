@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direct Deposit Confirmation Receipt</title>
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+color: #1e293b;
+line-height: 1.5;
+margin: 0;
+padding: 40px 20px;
+background-color: #f1f5f9;
+}
+
+.receipt-container {
+max-width: 650px;
+margin: 0 auto;
+background-color: #ffffff;
+border-radius: 16px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+padding: 40px;
+border: 1px solid #e2e8f0;
+}
+
+.header-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 30px;
+}
+
+.logo-cell {
+vertical-align: middle;
+width: 50%;
+}
+
+.status-cell {
+vertical-align: middle;
+text-align: right;
+width: 50%;
+}
+
+.badge {
+background-color: #ecfdf5;
+color: #10b981;
+padding: 6px 14px;
+border-radius: 50px;
+font-weight: bold;
+font-size: 13px;
+text-transform: uppercase;
+display: inline-block;
+border: 1px solid #a7f3d0;
+}
+
+.meta-text {
+font-size: 12px;
+color: #64748b;
+margin-top: 6px;
+}
+
+.amount-box {
+background-color: #f8fafc;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 30px;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.amount-label {
+font-size: 13px;
+color: #64748b;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 6px;
+}
+
+.amount-value {
+font-size: 34px;
+font-weight: bold;
+color: #0024f0;
+margin: 0;
+}
+
+.section-title {
+font-size: 13px;
+font-weight: bold;
+color: #475569;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+border-bottom: 2px solid #e2e8f0;
+padding-bottom: 6px;
+margin-top: 25px;
+margin-bottom: 15px;
+}
+
+.data-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+.data-table td {
+padding: 12px 0;
+border-bottom: 1px solid #f1f5f9;
+vertical-align: top;
+}
+
+.data-table td.label-col {
+width: 45%;
+color: #64748b;
+font-size: 14px;
+}
+
+.data-table td.value-col {
+width: 55%;
+font-weight: 600;
+color: #0f172a;
+text-align: right;
+font-size: 14px;
+}
+
+.footer-note {
+margin-top: 40px;
+padding-top: 20px;
+border-top: 1px dashed #cbd5e1;
+text-align: center;
+font-size: 11px;
+color: #64748b;
+line-height: 1.6;
+}
+
+@media print {
+body {
+background-color: #ffffff;
+padding: 0;
+}
+.receipt-container {
+box-shadow: none;
+border: none;
+padding: 20px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="receipt-container">
+
+<table class="header-table">
+<tr>
+<td class="logo-cell">
+<svg width="220" height="50" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+<defs>
+<linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0024f0" />
+<stop offset="50%" stop-color="#0066ff" />
+<stop offset="100%" stop-color="#00e676" />
+</linearGradient>
+</defs>
+<path d="M 5,10 L 25,5 L 25,45 L 5,35 Z" fill="#0024f0" />
+<path d="M 25,5 L 45,10 L 45,35 L 25,45 Z" fill="url(#shieldGrad)" />
+<text x="55" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="34" fill="#0024f0" letter-spacing="-1">trust</text>
+</svg>
+</td>
+<td class="status-cell">
+<div class="badge">All Fees Paid</div>
+<div class="meta-text">Direct Deposit Confirmation</div>
+</td>
+</tr>
+</table>
+
+<div class="amount-box">
+<div class="amount-label">Total Amount Disbursed</div>
+<div class="amount-value">$344,659.00 CAD</div>
+</div>
+
+<div class="section-title">Recipient Account Details</div>
+<table class="data-table">
+<tr>
+<td class="label-col">Account Holder Name</td>
+<td class="value-col">Joanne E Frappier</td>
+</tr>
+<tr>
+<td class="label-col">Receiving Bank Institution</td>
+<td class="value-col">Wise Payment Canada</td>
+</tr>
+<tr>
+<td class="label-col">Account Number</td>
+<td class="value-col">00001</td>
+</tr>
+<tr>
+<td class="label-col">Transit Number</td>
+<td class="value-col">179489655</td>
+</tr>
+<tr>
+<td class="label-col">Institution Number</td>
+<td class="value-col">705</td>
+</tr>
+</table>
+
+<div class="section-title">Transaction & Transfer Details</div>
+<table class="data-table">
+<tr>
+<td class="label-col">Originating Platform</td>
+<td class="value-col">Trust Wallet</td>
+</tr>
+<tr>
+<td class="label-col">Transfer Method</td>
+<td class="value-col">Direct Deposit Wire Transfer</td>
+</tr>
+<tr>
+<td class="label-col">Transfer Fee</td>
+<td class="value-col">$200.00 CAD</td>
+</tr>
+<tr>
+<td class="label-col">Fee Settlement Status</td>
+<td class="value-col" style="color: #10b981;">Fully Paid & Cleared</td>
+</tr>
+</table>
+
+<div class="footer-note">
+This document serves as an official confirmation of direct deposit. Funds are processed under standard electronic fund transfer guidelines and are subject to regular clearing house timelines. If you have any inquiries regarding this distribution, please contact support via your Trust digital interface.
+</div>
+
+</div>
+
+</body>
+</html>
+
